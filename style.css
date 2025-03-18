@@ -1,11 +1,11 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-bg: #121212; /* Fondo oscuro */
+    --color-neon-primary: #FF4081; /* Rosa neón */
+    --color-neon-secondary: #00FFD4; /* Turquesa neón */
+    --color-neon-tertiary: #FFEB3B; /* Amarillo neón */
+    --color-text: #FFFFFF; /* Texto blanco */
+    --color-input-bg: #222; /* Fondo input oscuro */
+    --color-button-bg: #444; /* Fondo botón oscuro */
 }
 
 /* Estilos generales */
@@ -17,7 +17,7 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,18 +32,18 @@ body {
 
 /* Banner */
 .header-banner {
-    flex: 40%;
+    flex: 25%; /* Ajustado para dar más espacio al contenido principal */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 20px 0 0;
 }
 
 /* Sección de entrada */
 .input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
+    flex: 75%; /* Ajustado para dar más espacio al contenido principal */
+    background-color: var(--color-bg); /* Fondo oscuro */
+    border: 2px solid var(--color-neon-primary); /* Borde neón */
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -54,20 +54,22 @@ body {
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+    font-size: 64px; /* Aumentado el tamaño */
+    font-family: "Press Start 2P", cursive; /* Fuente arcade */
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-neon-primary);
+    text-shadow: 0 0 10px var(--color-neon-primary); /* Resplandor neón */
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
+    font-family: "Press Start 2P", cursive; /* Fuente arcade */
+    font-size: 24px; /* Ajustado el tamaño */
+    font-weight: 400;
+    color: var(--color-neon-secondary);
     margin: 10px 0;
     text-align: center;
+    text-shadow: 0 0 5px var(--color-neon-secondary); /* Resplandor neón */
 }
 
 /* Contenedores de entrada y botón */
@@ -82,9 +84,15 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    background-color: var(--color-input-bg); /* Fondo oscuro */
+    border: 2px solid var(--color-neon-tertiary); /* Borde neón */
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+    color: var(--color-text); /* Texto blanco */
+}
+
+.input-name::placeholder {
+    color: #aaa; /* Color de placeholder más claro */
 }
 
 .button-container {
@@ -92,54 +100,53 @@ body {
     justify-content: center;
 }
 
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
 /* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: "Press Start 2P", cursive; /* Fuente arcade */
     font-size: 16px;
-    border: 2px solid #000;
+    border: 2px solid var(--color-neon-tertiary); /* Borde neón */
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-button-bg); /* Fondo oscuro */
+    color: var(--color-neon-tertiary); /* Texto neón */
     cursor: pointer;
+    text-shadow: 0 0 5px var(--color-neon-tertiary); /* Resplandor neón */
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #555; /* Oscurecer al pasar el mouse */
 }
 
 /* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
+    font-family: "Press Start 2P", cursive; /* Fuente arcade */
     font-size: 18px;
     margin: 20px 0;
 }
 
+#listaAmigos li {
+    color: var(--color-neon-secondary);
+    text-shadow: 0 0 5px var(--color-neon-secondary); /* Resplandor neón */
+}
+
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: var(--color-neon-primary);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    text-shadow: 0 0 10px var(--color-neon-primary); /* Resplandor neón */
+}
+
+.result-list span {
+    color: var(--color-neon-tertiary);
+    text-shadow: 0 0 10px var(--color-neon-tertiary); /* Resplandor neón */
 }
 
 /* Botón de sortear título */
@@ -148,15 +155,19 @@ ul {
     align-items: center;
     width: 100%;
     padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
+    color: var(--color-neon-tertiary);
+    background-color: var(--color-button-bg); /* Fondo oscuro */
     font-size: 16px;
+    justify-content: center; /* Centrar contenido */
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 10px; /* Reducido el margen */
+    filter: brightness(0) invert(1); /* Invertir color del icono */
+    width: 24px; /* Ajustar tamaño del icono */
+    height: 24px;
 }
 
 .button-draw:hover {
-    background-color: var(--color-button-hover);
+    background-color: #555; /* Oscurecer al pasar el mouse */
 }
