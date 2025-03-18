@@ -33,7 +33,7 @@ Las principales modificaciones realizadas al código original son:
 
 ## Instalación
 
-1.  Clona el repositorio: `git clone <URL_del_repositorio>`
+1.  Clona el repositorio: https://github.com/EspartaSoto/Desafio-Amigo-Secreto
 2.  Abre el archivo `index.html` en tu navegador.
 
 ## Dependencias
